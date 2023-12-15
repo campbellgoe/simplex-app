@@ -44,8 +44,8 @@ function drawNoise(ctx, ox = 0, oy = 0, width, height, layers = [800, 200, 100, 
 }
 
 function draw(ctx) {
-  const ox = performance.now()/100
-  const oy = -ox
+  const ox = performance.now()/100+width
+  const oy = -ox+height
   const layers = [width, width/2, width/4, width / 8, width/16, width/32, width/64]
   //ctx.clearRect(0, 0, canvas.width, canvas.height)
   for (let x = 0; x < canvas.width; x += width) {
